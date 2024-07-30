@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container */
+.container {
+  @apply bg-gradient-to-r from-yellow-200 to-purple-300 flex justify-center items-center min-h-screen;
+}
+
+/* App Wrapper */
+.app-wrapper {
+  background-color: #1e40af; /* Updated background color */
+  min-width: 450px;
+  min-height: 650px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 3px 6px 40px #000;
+  margin-bottom: 10px;
+}
+
+/* Header */
+.header h1 {
+  @apply text-4xl text-white text-center my-8;
+}
+
+/* Input Field */
+.task-input {
+  @apply outline-none w-72 -right-10 p-4 text-lg text-white bg-black border border-yellow-200 rounded-lg;
+}
+
+/* Add Button */
+.button-add {
+  @apply w-28 p-2 text-lg rounded-lg bg-yellow-200 text-black;
+}
+
+/* List Item */
+.list-item {
+  @apply flex items-center mb-4 p-2 border border-gray-300 rounded-lg;
+}
+
+/* Buttons */
+.button-complete,
+.button-edit,
+.button-delete {
+  @apply border-none outline-none cursor-pointer bg-transparent text-xl rounded-full;
+}
+
+.button-complete {
+  @apply text-pink-400 mr-2;
+}
+
+.button-edit {
+  @apply text-yellow-400 mr-2;
+}
+
+.button-delete {
+  @apply text-blue-200;
+}
+
+/* Completed Task */
+.complete {
+  @apply line-through text-black;
+}
+
+/* List */
+.list {
+  @apply w-56 bg-gray-800 border-none text-white text-lg pl-2 mr-4;
+}
