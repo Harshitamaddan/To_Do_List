@@ -1,68 +1,124 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Container */
 .container {
-  @apply bg-gradient-to-r from-yellow-200 to-purple-300 flex justify-center items-center min-h-screen;
+  background: linear-gradient(to right, #fef3c7, #d6bcfa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* App Wrapper */
 .app-wrapper {
-  background-color: #1e40af; /* Updated background color */
+  background-color: #1e40af;
   min-width: 450px;
   min-height: 650px;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 3px 6px 40px #000;
+  box-shadow: 3px 6px 40px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
 }
 
 /* Header */
 .header h1 {
-  @apply text-4xl text-white text-center my-8;
+  font-size: 2.25rem; /* 36px */
+  color: #ffffff;
+  text-align: center;
+  margin: 2rem 0; /* 32px */
 }
 
 /* Input Field */
 .task-input {
-  @apply outline-none w-72 -right-10 p-4 text-lg text-white bg-black border border-yellow-200 rounded-lg;
+  outline: none;
+  width: 18rem; /* 288px */
+  position: relative;
+  padding: 1rem; /* 16px */
+  font-size: 1.125rem; /* 18px */
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #fef3c7;
+  border-radius: 0.5rem; /* 8px */
 }
 
 /* Add Button */
 .button-add {
-  @apply w-28 p-2 text-lg rounded-lg bg-yellow-200 text-black;
+  width: 7rem; /* 112px */
+  padding: 0.5rem; /* 8px */
+  font-size: 1.125rem; /* 18px */
+  border-radius: 0.5rem; /* 8px */
+  background-color: #fef3c7;
+  color: #000000;
 }
 
 /* List Item */
 .list-item {
-  @apply flex items-center mb-4 p-2 border border-gray-300 rounded-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures even spacing between elements */
+  margin-bottom: 1rem; /* 16px */
+  padding: 0.5rem; /* 8px */
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem; /* 8px */
+}
+
+/* Task Input Field */
+.todo-item-input {
+  flex-grow: 1;
+  margin-right: 1rem; /* 16px */
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem; /* 16px */
 }
 
 /* Buttons */
 .button-complete,
 .button-edit,
-.button-delete {
-  @apply border-none outline-none cursor-pointer bg-transparent text-xl rounded-full;
+.button-delete,
+.button-move-up,
+.button-move-down {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.25rem; /* 20px */
+  border-radius: 9999px; /* Circle */
 }
 
+/* Button States */
 .button-complete {
-  @apply text-pink-400 mr-2;
+  color: #ec4899; /* Pink */
+  margin-right: 0.5rem; /* 8px */
 }
 
 .button-edit {
-  @apply text-yellow-400 mr-2;
+  color: #facc15; /* Yellow */
+  margin-right: 0.5rem; /* 8px */
 }
 
 .button-delete {
-  @apply text-blue-200;
+  color: #bfdbfe; /* Light Blue */
+  margin-right: 0.5rem; /* 8px */
+}
+
+.button-move-up,
+.button-move-down {
+  color: #94a3b8; /* Gray */
+  margin-right: 0.5rem; /* 8px */
 }
 
 /* Completed Task */
-.complete {
-  @apply line-through text-black;
+.completed {
+  text-decoration: line-through;
+  color: #000000;
 }
 
 /* List */
 .list {
-  @apply w-56 bg-gray-800 border-none text-white text-lg pl-2 mr-4;
+  width: 14rem; /* 224px */
+  background-color: #1f2937; /* Dark Gray */
+  border: none;
+  color: #ffffff;
+  font-size: 1.125rem; /* 18px */
+  padding-left: 0.5rem; /* 8px */
+  margin-right: 1rem; /* 16px */
 }

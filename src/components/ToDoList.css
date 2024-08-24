@@ -1,0 +1,74 @@
+.todo-list {
+  padding: 1rem;
+}
+
+.todo-list-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.completed {
+  background-color: #e0ffe0; /* Light green */
+}
+
+.todo-item-input {
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: default;
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.pending-text {
+  color: black;
+}
+
+.todo-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-complete i,
+.button-edit i,
+.button-delete i,
+.button-move-up i,
+.button-move-down i {
+  font-size: 1rem;
+}
+
+.button-complete i {
+  color: green;
+}
+
+.button-edit i {
+  color: blue;
+}
+
+.button-delete i {
+  color: red;
+}
+
+.button-move-up i,
+.button-move-down i {
+  color: black;
+}

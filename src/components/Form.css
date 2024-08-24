@@ -1,0 +1,27 @@
+.form-container {
+  margin-bottom: 1rem;
+}
+
+.form-flex {
+  display: flex;
+  align-items: center; /* Ensures input and button are vertically aligned */
+}
+
+.task-input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  flex-grow: 0;  /* Prevents the input from expanding to take up extra space */
+  width: 70%;    /* Sets a fixed width that ensures the button fits alongside */
+}
+
+.button-add {
+  margin-left: 0.5rem; /* Adjusts space between the input and button */
+  padding: 0.5rem 1rem;
+  background-color: #4caf50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './ToDoList.css';
 
 function ToDoList({ todos, setTodos, setEditTodo }) {
 
@@ -28,7 +29,7 @@ function ToDoList({ todos, setTodos, setEditTodo }) {
   };
 
   const moveDown = (index) => {
-    if (index === todos.length - 1) return; 
+    if (index === todos.length - 1) return;
     const newTodos = [...todos];
     const temp = newTodos[index];
     newTodos[index] = newTodos[index + 1];
@@ -37,55 +38,55 @@ function ToDoList({ todos, setTodos, setEditTodo }) {
   };
 
   return (
-    <div>
-      <ul>
+    <div className="todo-list">
+      <ul className="todo-list-items">
         {todos.map((todo, index) => (
           <li
-            className={`list-item ${todo.completed ? 'bg-green-200 line-through' : ''}`}
+            className={`list-item ${todo.completed ? 'completed' : ''}`}
             key={todo.id}
           >
             <input
-              type='text'
+              type="text"
               value={todo.title}
-              className={`w-full bg-transparent border-none text-lg pl-2 mr-4 ${todo.completed ? 'text-black' : 'text-white'}`}
+              className={`todo-item-input ${todo.completed ? 'completed-text' : 'pending-text'}`}
               readOnly
-              style={{ userSelect: 'none' }} 
+              style={{ userSelect: 'none' }}
             />
-            <div className='flex space-x-4 ml-auto'>
-              <button
-                type='button'
-                className='text-2xl text-red-600'
+            <div className="todo-buttons">
+              <button 
+                type="button" 
+                className="button-complete"
                 onClick={() => handleComplete(todo)}
               >
-                <i className='fa fa-check-circle'></i>
+                <i className="fas fa-check-circle"></i>
               </button>
-              <button
-                type='button'
-                className='text-2xl text-yellow-600'
+              <button 
+                type="button" 
+                className="button-edit"
                 onClick={() => handleEdit(todo)}
               >
-                <i className='fa fa-edit'></i>
+                <i className="fas fa-edit"></i>
               </button>
-              <button
-                type='button'
-                className='text-2xl text-purple-500'
+              <button 
+                type="button" 
+                className="button-delete"
                 onClick={() => handleDelete(todo.id)}
               >
-                <i className='fa fa-trash'></i>
+                <i className="fas fa-trash"></i>
               </button>
-              <button
-                type='button'
-                className='text-2xl text-green-600'
+              <button 
+                type="button" 
+                className="button-move-up"
                 onClick={() => moveUp(index)}
               >
-                <i className='fa fa-arrow-up'></i>
+                <i className="fas fa-arrow-up"></i>
               </button>
-              <button
-                type='button'
-                className='text-2xl text-green-600'
+              <button 
+                type="button" 
+                className="button-move-down"
                 onClick={() => moveDown(index)}
               >
-                <i className='fa fa-arrow-down'></i>
+                <i className="fas fa-arrow-down"></i>
               </button>
             </div>
           </li>

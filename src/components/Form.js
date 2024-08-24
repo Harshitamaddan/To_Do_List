@@ -34,17 +34,17 @@ const Form = ({ input, setInput, todos, setTodos, edit, setEditTodo }) => {
   };
 
   return (
-    <div className='mb-4'>
-      <form onSubmit={onFormSubmit} className='flex'>
+    <div className="form-container">
+      <form onSubmit={onFormSubmit} className="form-flex">
         <input
-          type='text'
-          placeholder='Enter a task...'
-          className='task-input'
+          type="text"
+          placeholder="Enter a task..."
+          className="task-input"
           value={input}
           required
           onChange={onInputChange}
         />
-        <button type='submit' className='button-add ml-4'>
+        <button type="submit" className="button-add">
           {edit ? 'Update' : 'Add'}
         </button>
       </form>
